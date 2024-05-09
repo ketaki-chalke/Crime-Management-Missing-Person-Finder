@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block description  %}This is my login-page{%endblock%}
+{% block robots %}report, follow{% endblock %}
+{% block keywords %}cms{% endblock %}
+{% block css %}{% static "main/report.css" %} {% endblock %}
+{% block title %}CMS{% endblock %}
+
+{% block body %}
+
+
+
+
+<h1 style="text-align: center;">CRIMINAL INFORMATION</h1><br><br>
+<a href="{% url 'features' %}"  class="btn btn-primary custom-btn" style="margin:15px;margin-top: 20px;padding: 10px;background-color:white;color:black;text-decoration:none">BACK</a>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <form action="report" method="POST">
+          {% csrf_token %}
+          <div class="md-3">
+            <label for="number-1" style="margin-left: 90px;">Case-id:</label>
+            <input class="field" type="number" id="number-1" class="form-control" name="case_id">
+    
+            <label for="number-2" style="margin-left: 160px;">Criminal No:</label>
+            <input class="field" type="number" id="number-2" class="form-control" name="crime_no">
+    
+            <label for="crime-type" style="margin-left: 130px;">Crime Type:</label>
+            <input class="field" type="text" id="crime-type" class="form-control" name="crime_type">
+          </div><br>
+
+          <div class="md-3">
+            <label for="criminal-name" style="margin-left: 90px;">Criminal Name:</label>
+            <input class="field" type="text" id="criminal-name" class="form-control" name="crime_name">
+    
+            <label for="age" style="margin-left: 160px;">Age:</label>
+            <input class="field" type="number" id="age" class="form-control" name="age">
+    
+            <label for="nickname" style="margin-left: 160px;">NickName:</label>
+            <input class="field" type="text" id="nickname" class="form-control" name="nickname">
+          </div><br>
+
+          <div class="md-3">
+            <label for="arrest-date" style="margin-left: 90px;">Arrest Date:</label>
+            <input class="field" type="date" id="arrest-date" class="form-control" name="adate" required>
+    
+            <label for="crime-date" style="margin-left: 180px;">Date of Crime:</label>
+            <input class="field" type="date" id="crime-date" class="form-control" name="dateoc" required>
+    
+            <label for="gender" style="margin-left: 230px;">Gender:</label>
+            <input type="text" name="gender" class="form-control" placeholder="Enter gender" name="gender">
+
+            </div><br>
+
+
+            <div class="md-3">
+              <label for="address" style="margin-left: 90px;">Address:</label>
+              <input class="field" type="text" id="address" class="form-control" name="address">
+    
+              <label for="birth-mark" style="margin-left: 160px;">Birth Mark:</label>
+              <input class="field" type="text" id="birth-mark" class="form-control" name="birthmark">
+    
+              <label for="wanted" style="margin-left: 130px;">Most Wanted:</label>
+              <input type="text" id="wanted" class="form-control" name="wanted" placeholder="Enter yes or no"></input>
+          
+            </div><br>
+    
+            <div class="md-3">
+              <label for="pending" style="margin-left: 90px;">Pending:</label>
+              <input class="field" type="text" id="pending" class="form-control" name="pending">
+            </div><br>
+    
+            <div>
+              <button type="submit" style="margin-left: 100px; padding: 7px;"  class="btn btn-primary custom-btn">Submit</button>
+            </div>
+
+            <div>
+              <a href="edit.html" style="text-align:center" class="btn btn-primary custom-btn"class="tag"><h2>Show</h2></a>
+            </div>
+        </form>  
+      </div>
+    </div>
+   </div>
+  </div>
+
+
+  
+{% endblock %}

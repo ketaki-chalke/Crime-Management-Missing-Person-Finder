@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block description  %}This is my homepage{%endblock%}
+{% block robots %}index, follow{% endblock %}
+{% block keywords %}cms{% endblock %}
+{% block css %}{% static "main/home.css" %} {% endblock %}
+{% block title %}CMS{% endblock %}
+
+{% block body %}
+<video autoplay loop muted plays-inline class="back-video">
+  <source src="{% static "img/Untitled-design.mp4" %}" type="video/mp4">
+</video>
+{% include "includes/nav.html" %}
+
+<div class="content">
+  <h1>Crime Management System & Missing Person Finder</h1>
+  <button type="button" onclick="location.href='{% url 'loginA' %}'">
+    Admin
+  </button>
+  
+  <button type="button" onclick="location.href='{% url 'signupG' %}'">
+    General Public</button>
+</div>
+
+
+
+<footer>
+  <div class="column">
+    <h2>About Us</h2>
+    <p>Empowering communities with our Crime Management System, we respond swiftly to criminal activities, revolutionizing safety. Our Missing Person Finder System effortlessly locates and reunites loved ones, fostering unity through advanced technology.</p>
+  </div>
+  <div class="column">
+    <h2>Quick Links</h2>
+    <ul>
+      <li><a href="{% url 'home' %}" style="color: #FFD700;">Home</a></li>
+      <li><a href="{% url 'faq' %}" style="color: #FFD700;">Services</a></li>
+      <li><a href="{% url 'contact' %}" style="color: #FFD700;">Contact</a></li>
+    </ul>
+  </div>
+  <div class="column">
+    <h2>Connect with Us</h2>
+    <div class="social-links">
+      <a href="#" target="_blank">Facebook</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank">Instagram</a>
+    </div>
+  </div>
+  <div class="column contact-info">
+    <h2>Contact Information</h2>
+    <p><strong>Phone:</strong> <a href="tel:+919876543210" style="color: #FFD700;">+91 98765-43210</a></p>
+    <p><strong>Address:</strong> Vashi, Mumbai, Maharashtra</p>
+    <div class="police-helpline">
+      <strong>Police Helpline:</strong> 100
+    </div>
+  </div>
+</footer>
+{% endblock %}

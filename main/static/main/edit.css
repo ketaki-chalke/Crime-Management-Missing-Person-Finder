@@ -1,0 +1,50 @@
+/* Custom styles for your page */
+body {
+  background-color: #333; /* Light gray background for the entire page */
+}
+
+.card {
+  margin-top: 20px; /* Add margin to cards for better spacing */
+}
+
+.card-body {
+  overflow-x: auto; /* Enable horizontal scrolling if table overflows */
+}
+
+.table {
+  background-color: rgb(232, 228, 228); /* White background for the table */
+  border: 1px solid #ddd; /* Add border to the table */
+}
+
+.table th,
+.table td {
+  padding: 10px; /* Padding for table cells */
+  text-align: center; /* Center align table content */
+}
+
+/* Alternate row color */
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+/* Hover effect on rows */
+.table tbody tr:hover {
+  background-color: #e9ecef; /* Lighter gray background on hover */
+}
+
+/* Styles for table header */
+.table thead th {
+  background-color: #007bff; /* Blue background for table header */
+  color: white; /* White text color for table header */
+  border: 1px solid #ddd; /* Add border to table header */
+}
+
+/* Center align heading */
+h1.text-center {
+  color: white; /* Dark gray color for the heading */
+}
+
+/* Custom margin for container */
+.container {
+  margin-top: 20px; /* Add margin to the top of the container */
+}

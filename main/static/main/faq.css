@@ -1,0 +1,83 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #141e30, #2a6c56);
+  color: #fff;
+}
+
+header {
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff; /* Fallback color */
+  background: linear-gradient(to bottom, #141e30, #2a6c56);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.faq-item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 16px;
+}
+
+.faq-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.more-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.more-link a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+header{
+display: flex;
+padding-left: 5%;
+padding-right: 5%;
+justify-content: space-between;
+box-shadow: 0px 10px 25px #0000006d;
+height: 60px;
+}
+.Main-nav{
+margin-top: 17px;
+}
+a{
+font-size: 20px;
+color: white;
+font-family: Arial, Helvetica, sans-serif;
+text-decoration: none;
+margin-right: 20px;
+}
+a:hover{
+color: tomato;
+}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block description  %}Create an account{%endblock%}
+{% block robots %}index, follow{% endblock %}
+{% block keywords %}signup, myshop{% endblock %}
+{% block css %}{% static "main/signupA.css" %} {% endblock %}
+{% block title %}SignupA{% endblock %}
+
+
+{% block body %}
+{% include "includes/nav.html" %}
+<form class="signup-box" action="" method="post">
+   {% csrf_token %}
+  <label for="name">Admin Name:</label><br>
+  <input class="field" type="text" id="name" name="adminName" required><br>
+
+  <label for="email">Email:</label><br>
+  <input class="field" type="email" id="email" name="email" required><br>
+
+  <label for="pass">Password:</label><br>
+  <input class="field" type="password" id="pass" name="password" required><br>
+  
+  <label for="pass">Confirm Password:</label><br>
+  <input class="field" type="password" id="pass" name="cpassword" required><br>
+  
+
+  <br><br>
+  <button type="submit">Signup</button>
+
+  <p>Already signupA ? <a href="{% url "loginA" %}">log In</a></p>
+</form>
+    
+{% endblock %}

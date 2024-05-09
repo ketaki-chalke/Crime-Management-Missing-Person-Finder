@@ -1,0 +1,49 @@
+{% load static %}
+{% block css %} 
+  <link rel="stylesheet" href="{% static "main/missing.css" %}">
+{% endblock %}
+<h1> MISSING PERSON DATA-VIEW </h1>
+<a href="{% url 'features' %}"  class="btn btn-primary custom-btn" style="margin:15px;margin-top: 20px;padding: 10px;background-color:white;color:black;text-decoration:none">BACK</a>
+<!--
+{% for item in all %}
+<div>
+    <strong>DATA</strong><br/>
+    <strong>Name:</strong> {{ item.name }} <br/>
+    <strong>Age:</strong> {{ item.age }}<br/>
+    <strong>Description:</strong> {{ item.description }}<br/>
+    <strong>IdentificationMark:</strong> {{ item.identificationMark }}<br/>
+    <strong>Height:</strong> {{ item.height }}<br/>
+    <strong>Weight:</strong> {{ item.weight }}<br/>
+    <strong>Gender:</strong> {{ item.gender }}<br/>
+    <strong>Number:</strong> {{ item.number }}<br/>
+    <strong>Image:</strong> <img src="{{ item.image.url }}" alt="{{ item.name }} image" class="thumbnail-img"><br/>
+    <hr>
+</div>
+{% endfor %}row row-cols-1 row-cols-md-5
+-->
+
+<div class="row row-cols-1 row-cols-md-5 g-4 align-items-stretch">
+  {% for item in all %}
+    <div class="col" style="display:inline-block; margin-right:25px">
+      
+      <div class="card h-100">
+       
+                <img src="{{ item.image.url }}" alt="{{ item.name }} image" class="card-img-top thumbnail-img">
+           
+        <div class="card-body">
+          <h5 class="card-title"><strong>Name:</strong> {{ item.name }}</h5>
+          <p class="card-text">
+            <strong>Age:</strong> {{ item.age }}<br/><br>
+            <strong>Description:</strong> {{ item.description }}<br/><br>
+            <strong>IdentificationMark:</strong> {{ item.identificationMark }}<br/><br>
+            <strong>Height:</strong> {{ item.height }}<br/>
+            <strong>Weight:</strong> {{ item.weight }}<br/>
+            <strong>Gender:</strong> {{ item.gender }}<br/>
+            <strong>Number:</strong> {{ item.number }}<br/>
+          </p>
+        </div>
+       
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,153 @@
+header{
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: space-between;
+  box-shadow: 0px 10px 25px #0000006d;
+  height: 60px;
+}
+.Main-nav{
+  margin-top: 17px;
+}
+a{
+  font-size: 20px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  margin-right: 20px;
+}
+a:hover{
+  color: tomato;
+}
+
+.content h1{
+  font-size: 100px;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.content button {
+  padding: 15px;
+  font-size: 15px;
+  margin-left: 25px;
+  border-radius: 30px;
+  color: black;
+  font-weight: bold;
+  background-color: antiquewhite;
+  border: none;
+  transition-duration: 1s;
+}
+
+.content button:hover{
+  background-color: black;
+  color: antiquewhite;
+  cursor: pointer;
+  border: none;
+}
+
+.back-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+
+
+
+
+body{
+  margin: 0px
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.column {
+  flex: 1 1 300px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.column h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #FFD700; /* Gold */
+  text-transform: uppercase;
+}
+
+.column p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin-right: 15px;
+  color: #1E90FF; /* Dodger Blue */
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #FFD700; /* Gold on hover */
+}
+
+.contact-info {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.police-helpline {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #FF4500; /* Red-Orange */
+}
+
+
+@media (min-aspect-ratio:16/9){
+  .back-video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio:16/9){
+  .back-video{
+    width: auto;
+    height: 100%;
+  }
+}

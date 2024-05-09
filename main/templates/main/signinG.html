@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block description  %}This is my login-page{%endblock%}
+{% block robots %}index, follow{% endblock %}
+{% block keywords %}cms{% endblock %}
+{% block css %} {% static "main/loginA.css" %} {% endblock %}
+{% block title %}CMS{% endblock %}
+
+
+{% block body %}
+{% include "includes/nav.html" %}
+<div class="login-box">
+  <h2>Login as General-Public</h2>
+  <form action="" method="post">
+       {% csrf_token %}
+      <div class="user-box">
+          <input type="text" placeholder="Username" name="username" required>
+          <label for="">Username</label>
+      </div>
+      <div class="user-box">
+          <input type="password" placeholder="Password" name="password" required>
+          <label for="">password</label>
+      </div>
+      <button type="submit" style="cursor: pointer;" class="butboxx">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>LOGIN
+      </button><br>
+      <button type="submit" style="cursor: pointer" class="butboxx" onclick="location.href='{% url 'signupG'%}'">BACK</button>
+  </form>
+</div>
+
+
+
+
+{% endblock %}

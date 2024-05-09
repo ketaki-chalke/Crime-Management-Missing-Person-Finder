@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block description  %}This is my login-page{%endblock%}
+{% block robots %}index, follow{% endblock %}
+{% block keywords %}cms{% endblock %}
+{% block css %} {% static "main/features.css" %} {% endblock %}
+{% block title %}CMS{% endblock %}
+
+{% block body %}
+<h1 style="text-align:center;color:white">FEATURES</h1>
+<a href="{% url 'logoutt' %}"  class="btn btn-primary custom-btn" style="margin:20px;margin-top: 25px;padding-top: 11px">Logout</a>
+<div class="row">
+  <div class="crimebox">
+    <img src="{% static 'img/report.PNG' %}" class="pic-1">
+    <a href="{% url "report" %}"><h2>Crime-Report-Management</h2></a>
+  </div>
+  <div class="crimebox">
+    <img src="{% static 'img/missing.png' %}" class="pic-2">
+    <a href="{% url "missing" %}"><h2>Missing Person</h2></a>
+  </div>
+  <div class="crimebox">
+    <img src="{% static 'img/face.PNG' %}" class="pic-3">
+    <a href="{% url "recog" %}"><h2>Face-Identifier</h2></a>
+  </div>
+</div>
+{% endblock %}

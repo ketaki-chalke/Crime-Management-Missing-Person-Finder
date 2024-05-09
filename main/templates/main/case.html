@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block description  %}This is my login-page{%endblock%}
+{% block robots %}index, follow{% endblock %}
+{% block keywords %}cms{% endblock %}
+{% block css %} {% static "main/case.css" %} {% endblock %}
+{% block title %}CMS{% endblock %}
+
+{% block body %}
+<header>
+  <h1>Missing Persons</h1>
+</header>
+
+<main>
+  <section id="missing-person-form">
+    <a href="{% url 'logout' %}"  class="btn btn-primary custom-btn">Logout</a>
+      <h2>Report a Missing Person</h2>
+      
+      <form action="case" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+        
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required>
+
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea>
+
+          <label for="identification-mark">Identification Mark:</label>
+          <input type="text" id="identification-mark" name="identificationMark" required>
+
+          <label for="height">Height (in cm):</label>
+          <input type="number" id="height" name="height" required>
+
+          <label for="weight">Weight (in kg):</label>
+          <input type="number" id="weight" name="weight" required>
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select>
+
+          <label for="">Phone number:</label>
+          <input type="tel" id="phone-number" name="number" required>
+          
+
+          <label class="field" class="-label" for="file">
+            <span>Change Image</span>
+          </label>
+          <input id="file" type="file"  name="image" onchange="loadFile(event)"/><br><br>
+  
+          <button type="submit">Report Missing Person</button>
+      </form>
+  </section>
+{% endblock %}

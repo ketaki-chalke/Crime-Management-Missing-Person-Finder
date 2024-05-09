@@ -1,0 +1,55 @@
+.container{
+  background-color: black;
+  color: aliceblue;
+}
+
+  body {
+    background-color: #202020; /* Dark background color */
+    color: #ffffff; /* Text color */
+  }
+
+  h1 {
+    color: #ffffff; /* Heading color */
+  }
+
+  .container {
+    background-color: #333333; /* Container background color */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background-color: #444444; /* Card background color */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .field {
+    background-color: #555555; /* Input field background color */
+    color: #ffffff; /* Input field text color */
+    border: 1px solid #777777; /* Input field border color */
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  button {
+    background-color: #007bff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #727070 ; /* Button background color on hover */
+  }
+  .custom-btn {
+    background-color:#333 ;
+    color: #ccc;
+    padding: 12px;
+    text-decoration: none;
+    /* Add more styling as needed */
+  }
+  

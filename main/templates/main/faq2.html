@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block description  %}This is my login-page{%endblock%}
+{% block robots %}index, follow{% endblock %}
+{% block keywords %}cms{% endblock %}
+{% block css %} {% static "main/faq2.css" %} {% endblock %}
+{% block title %}CMS{% endblock %}
+
+{% block body %}
+{% include "includes/nav.html" %}
+<h1 style="text-align: center;margin-top: 15px;">FAQ's</h1>
+   
+
+    <section>
+        <div class="faq-box" onclick="toggleAnswer('answer1')">
+            <div class="faq-question">How can I report a crime?</div>
+            <div class="faq-answer" id="answer1">You can report a crime by contacting your local law enforcement or using our online reporting system.</div>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('answer2')">
+            <div class="faq-question">Can I report a crime anonymously?</div>
+            <div class="faq-answer" id="answer2">Yes, we provide an option for anonymous reporting to protect your identity.</div>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('answer3')">
+            <div class="faq-question">What should I do if I witness a crime?</div>
+            <div class="faq-answer" id="answer3">If you witness a crime, it's important to stay safe and report the incident to law enforcement as soon as possible.</div>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('answer4')">
+            <div class="faq-question">How do I get updates on my reported crime?</div>
+            <div class="faq-answer" id="answer4">You can check the status of your reported crime by contacting the relevant law enforcement agency or using our online tracking system.</div>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('answer5')">
+            <div class="faq-question">What information should I provide when reporting a crime?</div>
+            <div class="faq-answer" id="answer5">When reporting a crime, provide details such as the location, time, description of the incident, and any other relevant information that can assist law enforcement.</div>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('answer6')">
+            <div class="faq-question">Can I report a crime on behalf of someone else?</div>
+            <div class="faq-answer" id="answer6">Yes, you can report a crime on behalf of someone else, but it's essential to have accurate information and consent from the person affected.</div>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('answer7')">
+            <div class="faq-question">Is there a time limit for reporting a crime?</div>
+            <div class="faq-answer" id="answer7">While it's best to report a crime as soon as possible, some jurisdictions may have specific statutes of limitations. Check with your local law enforcement for guidance.</div>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('answer8')">
+            <div class="faq-question">How can I follow up on an existing police report?</div>
+            <div class="faq-answer" id="answer8">To follow up on a police report, contact the law enforcement agency where the report was filed. They can provide updates on the investigation or guide you on the next steps.</div>
+        </div>
+
+        <div class="faq-box" onclick="toggleAnswer('answer9')">
+            <div class="faq-question">What should I do if I've been a victim of identity theft?</div>
+            <div class="faq-answer" id="answer9">If you've been a victim of identity theft, report the incident to the police and contact your bank or credit card company immediately. Consider placing a fraud alert on your accounts.</div>
+        </div>
+
+        <!-- Repeat the above boxes for each column -->
+
+    </section>
+
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+    </script>
+{% endblock %}

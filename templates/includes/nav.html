@@ -1,0 +1,25 @@
+{% load static %}
+
+<header>
+  <img src="{% static 'img/police-symbol.PNG' %}" width="130" alt="police-symbol">
+
+  <main>
+  <nav class="Main-nav">
+    <a href="{% url "home" %}">HOME</a>
+    <a href="my.html">UPDATES</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="faq.html">FAQS</a>
+  </nav>
+</main>
+<script>
+  function openExternalLink(url) {
+      // Open the external link in a new window or tab
+      const externalWindow = window.open(url, '_blank');
+      
+      // Add the current URL to the browser's history
+      if (externalWindow) {
+          externalWindow.history.pushState({}, '', window.location.href);
+      }
+  }
+</script>
+</header>

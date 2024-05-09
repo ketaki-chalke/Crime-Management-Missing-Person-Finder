@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Update Crime Report{% endblock %}
+
+{% block body %}
+<h1 class="text-center my-3">Update Crime Report</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save Changes</button>
+</form>
+{% endblock %}

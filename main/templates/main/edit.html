@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block description  %}This is my edit-page{%endblock%}
+{% block robots %}index, follow{% endblock %}
+{% block keywords %}cms{% endblock %}
+{% block css %} {% static "main/edit.css" %} {% endblock %}
+{% block title %}CMS{% endblock %}
+
+{% block body %}
+<h1 class="text-center my-3">CRIME REPORT</h1>
+<a href="{% url 'report' %}"  class="btn btn-primary custom-btn" style="margin:15px;margin-top: 20px;padding: 10px;background-color:white;color:black;text-decoration:none">BACK</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-striped" class="styled-table">
+            <thead>
+              <tr>
+                <th>Case-id</th>
+                <th>Criminal No</th>
+                <th>Crime type</th>
+                <th>Criminal Name</th>
+                <th>Age</th>
+                <th>NickName</th>
+                <th>Arrest Date</th>
+                <th>Date of Crime</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Birth Mark</th>
+                <th>Most Wanted</th>
+                <th>Pending</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for s in std %}
+              <tr>
+                <td>{{s.case_id}}</td>
+                <td>{{s.crime_no}}</td>
+                <td>{{s.crime_type}}</td>
+                <td>{{s.crime_name}}</td>
+                <td>{{s.age}}</td>
+                <td>{{s.nickname}}</td>
+                <td>{{s.adate}}</td>
+                <td>{{s.dateoc}}</td>
+                <td>{{s.gender}}</td>
+                <td>{{s.address}}</td>
+                <td>{{s.birthmark}}</td>
+                <td>{{s.wanted}}</td>
+                <td>{{s.pending}}</td>
+                <td>
+                  <!-- Delete button with dynamic URL -->
+                  <form action="{% url 'delete_std' s.case_id %}" method="post">
+                    <input type="submit" class="btn btn-danger md-sm" style="text-decoration:none;color:white;background-color:red;padding:5px;margin-top:none;text-align:center;cursor:pointer" value="Delete"><br>
+                    {% csrf_token %}
+                  </form>
+                  <!-- Update button with dynamic URL -->
+                  <a href="{% url 'update_crime_report' s.case_id %}" class="btn btn-success md-sm" style="text-decoration:none;color:white;background-color:green;padding:3px">Update</a>
+              </td>
+              </tr>
+              {% endfor%}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

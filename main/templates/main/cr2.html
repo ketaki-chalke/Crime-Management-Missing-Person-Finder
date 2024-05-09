@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block css %}{% static "main/cr2.css" %} {% endblock %}
+  <title>Document</title>
+</head>
+{% block body %}
+  <a href="my.html">BACK</a>
+  <section>
+    <details open>
+      <summary><h1 style="color: aliceblue;">Mumbai Cop Poses As Food Delivery Agent, Arrests Peddler With ₹ 10 Lakh Drug</h1></summary>
+      <div>
+        <img src="{% static 'img/crime2.PNG' %}" class="pic-2">
+        <p>Inspector Deepak Sawant, the head of crime branch unit 10, donned the uniform of a food delivery agent to arrest the accused in the SV Road area in Mumbai.</p>
+      </div>
+    </details>
+    <details>
+      <summary></summary>
+      <div>
+        <p>Mumbai Cop Poses As Food Delivery Agent, Arrests Peddler With Rs 10 Lakh Drug
+          The police recovered 100 gm of mephedrone (MD) worth ₹ 10 lakh (Representational)
+          
+          
+          Mumbai: An officer of the Mumbai police's crime branch posed as a food delivery agent to apprehend a drug peddler and seized mephedrone worth ₹ 10 lakh in the western suburb of Jogeshwari here, an official said on Sunday.
+          Inspector Deepak Sawant, the head of crime branch unit 10, donned the uniform of a food delivery agent to apprehend the accused in the SV Road area in the intervening night of Saturday and Sunday, the official said.
+          
+          The accused, Faisal Akbar Makhanoja (34), was arrested by Sawant and his team after a chase, he said.
+        
+          The police recovered 100 gm of mephedrone (MD) worth ₹ 10 lakh from the accused, the official said, adding that a case under the Narcotic Drugs and Psychotropic Substances (NDPS) Act has been registered.
+        
+        </p>
+      </div>
+    </details>
+  </section>
+  {% endblock %}
+</html>
